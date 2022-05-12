@@ -23,20 +23,22 @@ const Arrow = ({ material }) => {
     return [_shape];
   }, []);
 
+  const MaterialKind = material;
+
   const extrudeSettings = { steps: 1, depth: 0.2, bevelEnabled: false };
   return (
     <Center>
       {" "}
       <mesh scale={1}>
         <Extrude scale={1} args={[shape, extrudeSettings]}>
-          {material}
+          <MaterialKind />
         </Extrude>
       </mesh>
     </Center>
   );
 };
 
-Arrow.defaultProps = { material: <Basic /> };
+Arrow.defaultProps = { material: Basic };
 Arrow.propTypes = {
   material: PropTypes.symbol,
 };
