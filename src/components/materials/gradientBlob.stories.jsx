@@ -11,7 +11,7 @@ export default {
   decorators: [
     (Story) => (
       <Canvas>
-        <Box material={<Story />} />
+        <Box material={Story} />
       </Canvas>
     ),
   ],
