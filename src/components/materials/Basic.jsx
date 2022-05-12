@@ -5,7 +5,7 @@ const Basic = ({ color, edgesColor }) => {
   return (
     <>
       <meshBasicMaterial color={color} />
-      <Edges color={edgesColor} scale={1} threshold={1} />
+      <Edges color={edgesColor} scale={1} threshold={0.1} />
     </>
   );
 };

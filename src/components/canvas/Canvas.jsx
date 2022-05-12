@@ -17,11 +17,9 @@ const Canvas = ({ children, color = "black" }) => {
       dpr={[1, 2]}
       camera={{ position: [0, 0.57734471598, 0.81650050761], zoom: 200 }}
     >
-      <group rotation={[0, 45 * (Math.PI / 180), 0]}>
-        <Bounds fit clip observe margin={1.25} damping={0}>
-          {children}
-        </Bounds>
-      </group>
+      <Bounds fit clip observe margin={1.25} damping={0}>
+        {children}
+      </Bounds>
 
       <OrbitControls
         autoRotate
