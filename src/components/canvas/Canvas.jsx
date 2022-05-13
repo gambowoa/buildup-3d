@@ -6,25 +6,33 @@ import {
   Center,
   Bounds,
 } from "@react-three/drei";
-import Box from "../primitives/Box";
+import Box from "../shapes/Box";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 
-const Canvas = ({ children, color = "black" }) => {
+const Canvas = ({
+  children,
+  color = "black",
+  position = [0, 0.57734471598, 0.81650050761],
+  autoRotate = true,
+  zoom = 40,
+}) => {
+  const { height, width, dpr } = useWindowDimensions();
+  console.log(width);
   return (
-    <ThreeCanvas
-      flat
-      linear
-      orthographic
-      dpr={[1, 2]}
-      camera={{ position: [0, 0.57734471598, 0.81650050761], zoom: 200 }}
-    >
-      <Bounds fit clip observe margin={1.25} damping={0}>
-        {children}
-      </Bounds>
+    <ThreeCanvas flat linear dpr={dpr}>
+      <OrthographicCamera
+        makeDefault
+        position={position}
+        zoom={(width * zoom) / 100}
+        far={1000}
+        near={-1000}
+      />
+      {children}
 
       <OrbitControls
-        autoRotate
+        autoRotate={autoRotate}
         enableRotate={true}
-        enablePan={false}
+        enablePan={true}
         enableZoom={true}
       />
       <color attach="background" args={[color]} />

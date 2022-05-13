@@ -1,6 +1,6 @@
 import React from "react";
 import Canvas from "../canvas/Canvas";
-import Box from "../primitives/Box";
+import Box from "../shapes/Box";
 import GradientBlob from "./GradientBlob";
 
 const Component = GradientBlob;

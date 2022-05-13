@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import PropTypes from "prop-types";
 import Basic from "../materials/Basic";
-const Box = ({ depth, height, width, material }) => {
+const Box = ({ depth, height, width, material, ...restProps }) => {
   useEffect(() => {
     console.log("something changed!");
   }, []);
@@ -10,7 +10,7 @@ const Box = ({ depth, height, width, material }) => {
   const MaterialKind = material;
 
   return (
-    <mesh scale={1}>
+    <mesh scale={1} {...restProps}>
       <boxBufferGeometry args={[width, height, depth]} />
       {<MaterialKind />}
     </mesh>

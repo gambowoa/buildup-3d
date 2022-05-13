@@ -2,10 +2,10 @@ import React from "react";
 
 import PropTypes from "prop-types";
 import Basic from "../materials/Basic";
-const Icosahedron = ({ detail, radius, material }) => {
+const Icosahedron = ({ detail, radius, material, ...restProps }) => {
   const MaterialKind = material;
   return (
-    <mesh scale={1}>
+    <mesh scale={1} {...restProps}>
       <icosahedronBufferGeometry args={[radius, detail]} />
       <MaterialKind />
     </mesh>

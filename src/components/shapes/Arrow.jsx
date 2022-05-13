@@ -4,7 +4,7 @@ import Basic from "../materials/Basic";
 import PropTypes from "prop-types";
 import { Edges, MeshDistortMaterial, Extrude, Center } from "@react-three/drei";
 
-const Arrow = ({ material }) => {
+const Arrow = ({ material, ...restProps }) => {
   const shape = React.useMemo(() => {
     const _shape = new THREE.Shape();
 

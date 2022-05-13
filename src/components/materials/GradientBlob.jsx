@@ -28,7 +28,7 @@ const GradientBlob = ({
     <>
       <LayerMaterial ref={ref} toneMapped={false}>
         <Noise
-          type="simplex"
+          type="perlin"
           scale={scale}
           colorA={colorA}
           colorB={colorB}

@@ -1,9 +1,9 @@
 import React from "react";
 import Canvas from "../canvas/Canvas";
 import Box from "../shapes/Box";
-import Basic from "./Basic";
+import Wireframe from "./Wireframe";
 
-const Component = Basic;
+const Component = Wireframe;
 
 export default {
   title: `Materials/${Component.name}`,
