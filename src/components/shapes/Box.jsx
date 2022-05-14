@@ -12,7 +12,7 @@ const Box = ({ depth, height, width, material, ...restProps }) => {
   return (
     <mesh scale={1} {...restProps}>
       <boxBufferGeometry args={[width, height, depth]} />
-      {<MaterialKind />}
+      <MaterialKind />
     </mesh>
   );
 };

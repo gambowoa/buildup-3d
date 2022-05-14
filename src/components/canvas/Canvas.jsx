@@ -19,7 +19,7 @@ const Canvas = ({
   const { height, width, dpr } = useWindowDimensions();
   console.log(width);
   return (
-    <ThreeCanvas flat linear dpr={dpr}>
+    <ThreeCanvas flat dpr={dpr}>
       <OrthographicCamera
         makeDefault
         position={position}
@@ -35,7 +35,7 @@ const Canvas = ({
         enablePan={true}
         enableZoom={true}
       />
-      <color attach="background" args={[color]} />
+      {/* <color attach="background" args={[color]} /> */}
     </ThreeCanvas>
   );
 };

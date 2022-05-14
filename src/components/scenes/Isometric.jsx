@@ -24,7 +24,9 @@ import Icosahedron from "../shapes/Icosahedron";
 //   [2, 0, 0],
 //   [3, 0, 1],
 // ];
+import Basic from "../materials/Basic";
 
+const newMaterial = <Basic color="#E0DCC3" edgesColor="black" />;
 const boxes = [
   [0, -1, 0],
   [-1, -1, 0],
@@ -56,10 +58,13 @@ const boxes = [
 const Isometric = () => {
   console.log(Wireframe.props);
   return (
-    <Canvas color="white" zoom={20} autoRotate={true}>
+    <Canvas color="none" zoom={20} autoRotate>
       <group position={[0, -1, 0]} rotation={[0, (45 * Math.PI) / 180, 0]}>
         {boxes.map((v) => (
-          <Box position={v} />
+          <Box
+            material={() => <Basic color="#43A047" edgesColor="white" />}
+            position={v}
+          />
         ))}{" "}
       </group>
     </Canvas>

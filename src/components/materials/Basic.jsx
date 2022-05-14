@@ -10,7 +10,7 @@ const Basic = ({ color, edgesColor }) => {
   );
 };
 
-Basic.defaultProps = { color: "#00B0FF", edgesColor: "#FFFFFF" };
+Basic.defaultProps = { color: "white", edgesColor: "black" };
 Basic.propTypes = {
   color: PropTypes.string,
   edgesColor: PropTypes.string,
