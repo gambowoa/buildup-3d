@@ -58,7 +58,7 @@ const boxes = [
 const Isometric = () => {
   console.log(Wireframe.props);
   return (
-    <Canvas color="none" zoom={20} autoRotate>
+    <Canvas color="none" flat zoom={20} autoRotate>
       <group position={[0, -1, 0]} rotation={[0, (45 * Math.PI) / 180, 0]}>
         {boxes.map((v) => (
           <Box

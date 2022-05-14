@@ -5,12 +5,12 @@ const Basic = ({ color, edgesColor }) => {
   return (
     <>
       <meshBasicMaterial color={color} />
-      <Edges color={edgesColor} scale={1} threshold={0.1} />
+      <Edges color={edgesColor} scale={1} threshold={15} />
     </>
   );
 };
 
-Basic.defaultProps = { color: "white", edgesColor: "black" };
+Basic.defaultProps = { color: "lightblue", edgesColor: "black" };
 Basic.propTypes = {
   color: PropTypes.string,
   edgesColor: PropTypes.string,
